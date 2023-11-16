@@ -88,4 +88,4 @@ Imagine that your question like: "how can i get tickets from Moscow to Tokyo?". 
 - Fine-tuned model may be a little bit off the right topic (talking about trains, not airplanes)
 - Your question may be not quite well organized
 
-[Link to BLEU](https://www.digitalocean.com/community/tutorials/bleu-score-in-python) Assuming all these nuances we can calculate how our answer was relevant/not relevant.
+[Link to BLEU](https://www.digitalocean.com/community/tutorials/bleu-score-in-python) Assuming all these nuances we can calculate how relevant/not relevant our answer was.
