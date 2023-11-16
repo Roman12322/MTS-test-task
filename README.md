@@ -1,13 +1,13 @@
 # MTS-test-task
 
-## Описание задания
+## Task description
 
-Цель: дообучить языковую модель на кастомном/найденном наборе данных, количество параметров которой <7b для задачи заказа авиабилетов.  
+Goal: fine-tune model with less than 7b parameters for buying air tickets on a custom/found dataset.  
 
-## Набор данных:
+## Dataset overview:
 
-В качестве датасета для дообучения модели был выбран [bitext/Bitext-customer-support-llm-chatbot-training-dataset](https://huggingface.co/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset/blob/main/README.md), 
-This dataset can be used to train Large Language Models such as GPT, Llama2 and Falcon, both for Fine Tuning and Domain Adaptation.
+As for dataset i chose [bitext/Bitext-customer-support-llm-chatbot-training-dataset](https://huggingface.co/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset/blob/main/README.md), because
+this dataset can be used to train Large Language Models such as GPT, Llama2 and Falcon, both for Fine Tuning and Domain Adaptation.
 
 The dataset has the following specs:
 
@@ -26,11 +26,11 @@ For a full list of verticals and its intents see [https://www.bitext.com/chatbot
 
 The question/answer pairs have been generated using a hybrid methodology that uses natural texts as source text, NLP technology to extract seeds from these texts, and NLG technology to expand the seed texts. All steps in the process are curated by computational linguists.
 
-## Dataset Token Count
+### Dataset Token Count
 
 The dataset contains an extensive amount of text data across its 'instruction' and 'response' columns. After processing and tokenizing the dataset, we've identified a total of 3.57 million tokens. This rich set of tokens is essential for training advanced LLMs for AI Conversational, AI Generative, and Question and Answering (Q&A) models.
 
-## Fields of the Dataset
+### Fields of the Dataset
 
 Each entry in the dataset contains the following fields:
 
@@ -40,7 +40,7 @@ Each entry in the dataset contains the following fields:
 - intent: the intent corresponding to the user instruction
 - response: an example expected response from the virtual assistant
 
-## Categories and Intents
+### Categories and Intents
 
 The categories and intents covered by the dataset are:
 
@@ -54,4 +54,31 @@ The categories and intents covered by the dataset are:
 - PAYMENT: check_payment_methods, payment_issue
 - REFUND: check_refund_policy, track_refund
 - SHIPPING_ADDRESS: change_shipping_address, set_up_shipping_address
+
+## Model
+The model ybelkada/falcon-7b-sharded-bf16 was chosen for training. The following arguments were put forward to justify the choice: 
+- Predisposition: the developers of the model claim that it is more prone to fine-tuning on a dataset that implies excellent interaction in the User-Assistant system.
+- Why not Llama-7b? Llama-7b has proven its accuracy, however, we wanted to experiment and find an analogue that, all other things being equal, is also able to accurately perform the tasks set in the examples of User-Assistant systems.
+
+## Fine-tuning
+For fine-tuning model was used specific LoraConfig. You may wanna play with lora_dropout, lora_r, lora_alpha as well and adjust it more precisely.
+```
+lora_alpha = 16
+lora_dropout = 0.1
+lora_r = 64
+
+config = LoraConfig(
+    lora_alpha=lora_alpha,
+    lora_dropout=lora_dropout,
+    r=lora_r,
+    bias="none",
+    task_type="CAUSAL_LM",
+    target_modules=[
+        "query_key_value",
+        "dense",
+        "dense_h_to_4h",
+        "dense_4h_to_h",
+    ]
+)
+```
 
