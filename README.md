@@ -96,6 +96,19 @@ The categories and intents covered by the dataset are:
 - SHIPPING_ADDRESS: change_shipping_address, set_up_shipping_address
 
 ## Model
+
+### Model research
+
+Fine-tuning a Large Language Model (LLM) for question-answering tasks involves several steps, and the choice of model can significantly impact the performance. Here are some models we might consider:
+
+- GPT Series from OpenAI: The GPT series, including GPT-3, is widely used for a variety of NLP tasks, including question answering. These models have been pre-trained on a vast corpus of text, making them a good starting point for fine-tuning. [link](https://www.lakera.ai/blog/llm-fine-tuning-guide)
+- T5 from Google: T5, or Text-to-Text Transfer Transformer, is another model that can be used for question answering tasks. It’s designed to handle a variety of NLP tasks by converting them all into a text generation problem.
+- ChatGPT, Claude, and Cohere: These are other LLMs that are being incorporated into tech stacks by companies. They can also be fine-tuned for specific use-cases. [link](https://www.lakera.ai/blog/llm-fine-tuning-guide)
+- PanGu-Coder FT:C+I and CodeGen FT:C+I: These models have shown state-of-the-art results in fine-tuning for answering programming questions. [link](https://link.springer.com/chapter/10.1007/978-3-031-36021-3_15)
+- Llama, Falcon: these two models should be also considers as a baseline for fine tuning them, because they're easy to tune and they're pretty light which is also important for some cases. 
+But we should remember that, the choice of model depends on our specific use-case and the amount of available parameters of model and data we have for fine-tuning.  
+
+### Choise to fine-tune
 The model ybelkada/falcon-7b-sharded-bf16 was chosen for training. The following arguments were put forward to justify the choice: 
 - Predisposition: the developers of the model claim that it is more prone to fine-tuning on a dataset that implies excellent interaction in the User-Assistant system.
 - Why not Llama-7b? Llama-7b has proven its accuracy, however, we wanted to experiment and find an analogue that, all other things being equal, is also able to accurately perform the tasks set in the examples of User-Assistant systems.
