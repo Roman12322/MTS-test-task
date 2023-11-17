@@ -8,22 +8,23 @@ Goal: fine-tune model with less than 7b parameters for buying air tickets on a c
 
 Question-Answering (Q&A) models are a subset of Large Language Models (LLMs) that have been specifically designed and trained to answer questions based on a given context. These models have seen significant evolution alongside the development of LLMs, benefiting from the advancements in language understanding and generation capabilities.
 
-##Evolution of Q&A models
+## Evolution of Q&A models
 
 The evolution of Q&A models has been closely tied to the development of LLMs. As LLMs grew in size and complexity, so did the capabilities of Q&A models.
-###BERT
+
+### BERT
 
 BERT, introduced by Google in 2018, was one of the first models to demonstrate the potential of Transformer-based architectures for Q&A tasks. BERT’s bidirectional training, which allows it to understand the context of a word based on all of its surroundings (left and right of the word), was a significant step forward for Q&A models. 
 
-###GPT-3 
+### GPT-3 
 
 With the introduction of GPT-3 by OpenAI in 2020, Q&A models took a massive leap forward. GPT-3’s ability to generate human-like text made it incredibly effective for Q&A tasks, capable of generating detailed and contextually relevant answers. 
 
-###LaMDA and MT-NLG 
+### LaMDA and MT-NLG 
 
 Further advancements were made with the introduction of Google’s LaMDA and Microsoft and NVIDIA’s MT-NLG in 2021. These models, with their massive parameter counts, demonstrated even greater language understanding and generation capabilities, further improving the performance of Q&A models. 
 
-###Use Cases of Q&A Models and C&I system coming up
+### Use Cases of Q&A Models and C&I system coming up
 
 Q&A models have found use in a variety of applications. They are used in customer service to automate responses to frequently asked questions, in virtual assistants to provide users with information, and in educational software to provide detailed explanations to student inquiries. The advancements in LLMs have directly contributed to the effectiveness of Q&A models in these applications. 
 But, there're some nuances like hype of C&I approach. One such alternative like  C&I (Conversations and Input) method [link](https://conferencematters.nl/en/the-ci-alternative-to-qa/) . 
