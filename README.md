@@ -26,11 +26,23 @@ With the introduction of GPT-3 by OpenAI in 2020, Q&A models took a massive leap
 
 Further advancements were made with the introduction of Google’s LaMDA and Microsoft and NVIDIA’s MT-NLG in 2021. These models, with their massive parameter counts, demonstrated even greater language understanding and generation capabilities, further improving the performance of Q&A models. 
 
-#### Use Cases of Q&A Models and C&I system coming up
+#### Use Cases of Q&A Models
 
 Q&A models have found use in a variety of applications. They are used in customer service to automate responses to frequently asked questions, in virtual assistants to provide users with information, and in educational software to provide detailed explanations to student inquiries. The advancements in LLMs have directly contributed to the effectiveness of Q&A models in these applications. 
-But, there're some nuances like hype of C&I approach. One such alternative like  C&I (Conversations and Input) method [link](https://conferencematters.nl/en/the-ci-alternative-to-qa/) . 
-This method involves breaking up a larger group into smaller groups of around six participants. After a presentation or discussion, these small groups are given a topic or question to discuss among themselves. This method increases audience activation from 1% (as in traditional Q&A models where only one person asks a question) to 75% or even 100%
+
+#### Prospects of Q&A Models
+
+The future of Large Language Models (LLMs) and Q&A models is quite promising. Here are some prospects:
+
+- Self-training, Fact-checking, and Sparse Expertise: The future of LLMs involves promising approaches such as self-training, fact-checking, and sparse expertise to mitigate issues like bias, inaccuracy, and toxicity
+
+- Chatbots: The Q&A capabilities of LLMs, combined with their ability to create human-like text, make them useful as chatbots to augment customer service operations2. The Chatbot market growth is projected to reach USD 3.62 Billion by 2030, growing at a CAGR of 23.9% [link](https://www.delltechnologies.com/asset/en-us/solutions/infrastructure-solutions/industry-market/unleashing-the-power-of-large-language-models-fauber.pdf).
+
+- Real-world Applications: The prospect of connecting LLMs to real-world contraptions has researchers focusing on making such systems safer3. One hope is that LLMs will have fewer hallucinations if they are trained on datasets combining text, images, and video to provide a richer sense of how the world works [link](https://www.economist.com/science-and-technology/2023/04/19/large-language-models-ability-to-generate-text-also-lets-them-plan-and-reason).
+
+- Continued Growth: While the idea of AI, machine learning, and LLMs evolving into sentient programs may be speculative, their impact on our society and industries will undoubtedly continue to grow [link](https://thenewstack.io/what-is-a-large-language-model/).
+
+These prospects indicate that LLMs and Q&A models will continue to evolve and play a significant role in various industries, from customer service to real-world applications.
 
 ## Dataset overview:
 
